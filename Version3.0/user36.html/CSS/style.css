@@ -19,3 +19,13 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+
+ul {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+ol {
+	list-style-type: normal;
+	padding-left: 25px;
+}
