@@ -8,6 +8,10 @@ table {
 	border-spacing: 0px;
 }
 
+body {
+	background-image: url("../fly_by_nightAlbumCover.jpg");
+}
+
 tr {
 	border: 1px solid #ffffff;
 	text-align: center;
@@ -17,7 +21,7 @@ tr {
 th {
 	text-align: center;
 	color: #ffffff;
-	background-color: #003366;
+	background-image: url("")
 }
 
 ul {
