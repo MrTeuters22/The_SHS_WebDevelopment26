@@ -72,7 +72,8 @@ h1, h2, h3, h4, h5, h6{
 p + * {
   background-color: #FFFF00;
 }
-#knowledge ul li::marker{
+
+#knowledge li::marker{
   content:"😜 ";
 }
 #rainbow td:hover {
