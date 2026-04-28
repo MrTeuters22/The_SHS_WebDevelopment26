@@ -65,32 +65,3 @@ h6 {
 *{
     font-family: Verdana;
 }
-#knowledge > * {
-    border: 3px red solid;
-}
-p + * {
-    background-color: #FFFF00;
-}
-#mark ::marker {
-    content:"😜 ";
-}
-#mark ::marker {
-    color: red;
-}
-#rainbow td:hover {
-    background-color: black;
-}
-
-#mark li:hover {
-    color:yellow;
-}
-#rainbow td:hover {
-    cursor: pointer;
-}
-strong:hover {
-    background-color: green;
-    cursor: pointer;
-}
-p:first-child {
-    color: deeppink;
-}
