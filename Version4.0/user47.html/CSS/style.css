@@ -134,7 +134,7 @@ title{
 }
 *{
     text-align:left;
-    border: 2px solid black;
+    border: 0px solid black;
 }
 #knowledge > * {
   border: 3px red solid;
