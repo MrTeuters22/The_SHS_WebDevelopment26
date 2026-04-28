@@ -1,3 +1,5 @@
+@import url(rainbow.css);
+
 .button {
 	background-color: #b8cd02;
 	color:crimson;
@@ -107,5 +109,33 @@ button:hover {
   background-color: yellow;
 }
 
+#knowledge > * {
+  border: 3px red solid;
+}
+p + * {
+  background-color: #FFFF00;
+}
 
+div li::marker{
+  color: red;
+}
 
+#knowledge > * ::marker{
+  content:"😜 ";
+}
+
+td:hover {
+  background-color: black;
+}
+
+.nav-link:link{
+	color: purple;
+}
+
+.nav-link:visited{
+	color: chocolate;
+}
+
+.button5 :focus{
+background-color: darkred;
+}
