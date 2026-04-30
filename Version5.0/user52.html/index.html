@@ -51,6 +51,9 @@
         --bs-table-color-type: var(--bs-table-striped-color);
         --bs-table-bg-type: rgba(255, 0, 0, 0.3)
         }
+        .img {
+            border-radius: 50%;
+            }
     </style>
 
     <body>
@@ -82,13 +85,26 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
+                            <a href="https://mail.google.com/" class="nav-link active" tabindex="-1">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="img" src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="Avatar" style="width:40px">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="http://burger.com/">Profile</a></li>
+                                <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=app.wizyemm.settings&hl=en_US">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="https://www.google.com/">Logout</a></li>
+                            </ul>
                         </li>
                         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-primary" type="button">Login</button>
-                    </form>
+                    <div name="form-button">
+                        <a href="form.html" class="btn btn-primary" role="button" > Login</a>
+                    </div>
                 </div>
             </div>
         </nav>
