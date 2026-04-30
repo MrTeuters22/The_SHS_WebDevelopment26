@@ -47,6 +47,9 @@
         .demo-content.bg-alt {
             background: #abb1b8;
         }
+        .table-striped > tbody > tr:nth-of-type(odd) > * { 
+        --bs-table-color-type: rgb(255, 0, 0, 0.3); 
+        }
     </style>
 
     <body>
@@ -154,14 +157,87 @@
             <!---------Table-Striped------------------------------------------->
             <div class="container mt-3" name="table-striped">
             </div>
+            <table class="table table-striped"> 
+            <thead> 
+                <tr> 
+                    <th>Fila</th> 
+                    <th>Nombre</th> 
+                    <th>Apellido</th> 
+                    <th>Correo electrónico</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr> 
+                    <td>1</td> 
+                    <td>Clark</td> 
+                    <td>Kent</td> 
+                    <td>clarkkent@mail.com</td> 
+                </tr> 
+                <tr> 
+                    <td>2</td> 
+                    <td>John</td> 
+                    <td>Carter</td> 
+                    <td>johncarter@mail.com</td> 
+                </tr> 
+                <tr> 
+                    <td>3</td> 
+                    <td>Peter</td> 
+                    <td>Parker</td> 
+                    <td>peterparker@mail.com</td> 
+                </tr> 
+            </tbody> 
+        </table>
 
             <!---------List-Group---------------------------------------------->
             <div class="container mt-3" name="list-group">
-            </div>
+            </div> 
+                <div class="list-group">
+                     <a href="#" class="list-group-item list-group-item-action active">
+                    <i class="fa fa-home"></i> Home
+            </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa-solid fa-inbox"></i> Inbox <span class="badge bg-secondary badge-pill badge-primary pull-right active">145</span>
+            </a>
+                    <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
+                    <i class="fa-solid fa-headphones"></i> Music <span class="badge bg-secondary badge-pill badge-primary pull-right active">50</span>
+           </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                 <i class="fa-solid fa-file"></i> File <span class="badge bg-secondary badge-pill badge-primary pull-right">8</span>
+            </a>
+        </div>
 
             <!---------Form Button--------------------------------------------->
             <div class="container mt-3 vstack" name="form-button">
             </div>
+            <div class="m-4">
+                <form action="confirmation.html" method="">
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="inputEmail" value="example@example.com">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
         </main>
 
         <!---------------------------------- Begin the footer ------------------------------------->
