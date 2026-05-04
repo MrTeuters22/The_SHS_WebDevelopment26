@@ -1,3 +1,5 @@
+@import url(rainbow.css);
+
 .button {
 	background-color: #4CAF50;
 	border: none;
@@ -82,7 +84,4 @@ h1, h2, h3, h4, h5, h6{
 	background-color: rgb(11, 107, 172);
 }
 
-*{
-	text-size-adjust: calc(100);
-	border: 2px dotted rgb(112, 112, 112);
-}
+
