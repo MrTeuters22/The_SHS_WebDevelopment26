@@ -28,12 +28,17 @@
         <!-- Brand -->
         <a class="navbar-brand fw-bold" href="#">Theo WebDev</a>
 
-        <!-- Toggle -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links -->
+        <!-- Navbar Content -->
         <div class="collapse navbar-collapse" id="navbarNav">
 
             <!-- Left Links -->
@@ -49,23 +54,19 @@
                 </li>
             </ul>
 
-            <!-- Right Side -->
+            <!-- Search Bar -->
+            <form class="d-flex me-3">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <!-- Right Side Links -->
             <ul class="navbar-nav align-items-center">
 
-                <!-- Search Bar -->
-                <li class="nav-item me-2">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </li>
-
-                <!-- Login -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">Log in</a>
                 </li>
 
-                <!-- Button -->
                 <li class="nav-item ms-2">
                     <a class="btn btn-success" href="#">Start Free Trial</a>
                 </li>
@@ -73,7 +74,6 @@
             </ul>
 
         </div>
-
     </div>
 </nav>
 
@@ -85,7 +85,7 @@
 
 <!-- MAIN -->
 <main class="container mt-4">
-    <p class="text-center">Example content goes here.</p>
+    <p class="text-center"></p>
 </main>
 
 <!-- FOOTER -->
@@ -93,13 +93,11 @@
     <div class="container p-4">
         <div class="row">
 
-            <!-- About -->
             <div class="col-md-4">
                 <h5>Theo WebDev</h5>
                 <p>This website was created by Theo using Bootstrap 5.</p>
             </div>
 
-            <!-- Links -->
             <div class="col-md-4">
                 <h5>Links</h5>
                 <ul class="list-unstyled">
@@ -109,7 +107,6 @@
                 </ul>
             </div>
 
-            <!-- Social -->
             <div class="col-md-4 text-center">
                 <h5>Follow Theo</h5>
                 <i class="fa-brands fa-facebook fa-2x mx-2"></i>
@@ -120,7 +117,6 @@
         </div>
     </div>
 
-    <!-- Bottom -->
     <div class="text-center p-3 bg-secondary">
         © 2026 Theo
     </div>
