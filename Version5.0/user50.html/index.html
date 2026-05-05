@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Version 5.0
-    Name:
-    Date Completed:
+    Name: Valeria Pereyra
+    Date Completed: May 01,2026
 -->
 
 <head>
@@ -60,47 +60,116 @@
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             margin: 10px;
         }
+        .navbar-nav .nav-link {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+        .dropdown-menu .dropdown-item{
+            font-family: 'impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 16px;
+        }
+            .dropdown-menu a {
+                color: #000000;
+            }
+            .dropdown-menu a:hover {
+                background-color: #0cc2d6;
+                color: #25098b;
+        }
+
     </style>
 
     <body>
         <!---------------------------------- Begin the nav-bar ----------------------------------->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!--Main Navigation-->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #37cfe0;">
+      <!----- Container wrapper -->
+      <div class="container" >
+        <!-- Toggle button -->
+        <button
+          data-mdb-collapse-init
+          class="navbar-toggler"
+          type="button"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav me-auto">
-                        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+        <!-- Collapsible wrapper Start-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="https://i.scdn.co/image/ab67706f0000000295c94a38840f54b062b8739d"
+              height="40"
+              alt="Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links Start-->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+             </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shortcuts</a>
+                        <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.youtube.com/">YouTube</a></li>
+                                <li><a class="dropdown-item" href="https://www.google.com/">Google</a></li>
+                                <li><a class="dropdown-item" href="https://open.spotify.com/">Spotify</a></li>
+                                <li><a class="dropdown-item" href="https://www.netflix.com/">Netflix</a></li>
+                                <li><a class="dropdown-item" href="https://www.amazon.com/">Amazon</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                                <li><a class="dropdown-item" href="https://www.github.com/">GitHub</a></li>
+                         </ul>
+                     </li>
                         <li class="nav-item">
-                            <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
+                            <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link active" tabindex="-1">Contact</a>
                         </li>
-                        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-primary" type="button">Login</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+            </ul>
+          <!-- Left links End-->
+        </div>
+        <!-- Collapsible wrapper End-->
+<!-- Right elements -->
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+            data-mdb-dropdown-init
+              class="nav-link dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"     
+              >        
+              <img
+                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li> <a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar End-->
+
+</header>
+<!--Main Navigation-->
         <!---------------------------------- End the nav-bar ------------------------------------->
         <!---------Jumbotron---------------------------------------------->
         <header class="p-5 bg-primary-subtle text-black" name="Jumbotron">
