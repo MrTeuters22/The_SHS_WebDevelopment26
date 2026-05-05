@@ -74,3 +74,13 @@ p.caption {
   padding: 0 20px 20px 20px;
   text-align: left;
 }
+
+.flipper-new {
+  position: relative;
+  transition: 5.0s;
+  transform-style: preserve-3d;
+}
+
+.container:hover .flipper-new {
+  transform: rotateY(360deg);
+}
