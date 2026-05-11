@@ -1,3 +1,4 @@
+@import url(rainbow.css);
 /* =============================================
    UNIVERSAL SELECTOR (Part IV)
    Changes every element on the page
@@ -23,7 +24,6 @@
     cursor: pointer;
 }
 
-/* Part II: Subclasses replacing button1 and button2 */
 .button-largeRadius {
     border-radius: 8px;
 }
@@ -40,7 +40,6 @@
    NEW BUTTON CLASSES (Part I - 3 new buttons)
    ============================================= */
 
-/* Button 1: Glow effect */
 .button-glow {
     background-color: #9b59b6;
     border-radius: 5px;
@@ -55,7 +54,6 @@
     box-shadow: 0 0 20px #9b59b6, 0 0 40px #9b59b6, 0 0 60px #9b59b6;
 }
 
-/* Button 2: Outline style */
 .button-outline {
     background-color: transparent;
     border: 3px solid #4CAF50;
@@ -70,7 +68,6 @@
     color: white;
 }
 
-/* Button 3: Raised / 3D shadow style */
 .button-raised {
     background-color: #e67e22;
     border-radius: 5px;
@@ -131,7 +128,6 @@ h6 {
    ID SELECTORS (Part III)
    ============================================= */
 
-/* Styles the hire buttons table area */
 #hireButtons {
     background-color: #f0f8ff;
     border: 2px solid #4CAF50;
@@ -139,7 +135,6 @@ h6 {
     padding: 10px;
 }
 
-/* Styles the footer social icon table */
 #footerTable {
     background-color: #222222;
     border-radius: 8px;
@@ -155,7 +150,6 @@ h6 {
     color: #4CAF50;
 }
 
-/* ID morecontent - yellow background as shown in lesson */
 #morecontent {
     background-color: yellow;
 }
