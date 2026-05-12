@@ -1,392 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Version 5.0
-    Name:
-    Date Completed:
--->
-
 <head>
-    <title>Bootstrap Examples</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNBA</title>
 
-<a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
-   
-<div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action active">
-        <i class="fa fa-home"></i> Home
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">
-        <i class="fa fa-camera"></i> Pictures <span class="badge bg-secondary badge-pill badge-primary pull-right active">145</span>
-    <i class="fa-solid fa-image"></i>
-    </a>
-    <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
-        <i class="fa fa-music"></i> Music <span class="badge bg-secondary badge-pill badge-primary pull-right active">50</span>
-    <i class="fa-solid fa-compact-disc"></i>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">
-        <i class="fa fa-film"></i> Videos <span class="badge bg-secondary badge-pill badge-primary pull-right">8</span>
-    <i class="fa-solid fa-circle-play"></i>
-    </a>
-</div>
-    <!-- Homepage meta data -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Version 5.0 - Index Bootstrap Examples">
 
-    <!-- CSS -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom -->
-    <link rel="stylesheet" href="CSS/style.css">
+<!-- External CSS -->
+<link rel="stylesheet" href="CSS/style.css">
 
-    <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <style type="text/css">
-        footer {
-            font-size: 12px;
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png">
+
+    <style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Impact, sans-serif;
+        }
+
+        body {
+            background-image: url("https://cdn.wnba.com/sites/4/2025/08/Thumbnail-46.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            min-height: 100vh;
+          }
+    
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000000;
+            padding: 15px 30px;
+            width: 100vw;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-left a, .nav-right a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            color: orange;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-section img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: rgb(255, 255, 255);
+            height: 70vh;
             text-align: center;
+            flex-direction: column;
+            padding-top: 40px;
         }
-        .table-striped > tbody > tr:nth-of-type(odd) > * {
-            --bs-table-color-type: var(--bs-table-striped-color);
-            --bs-table-bg-type: rgba(255, 0, 0, 0.3)
+
+        .hero h1 {
+            font-size: 150px;
+            margin-bottom: 20px;
         }
-        .demo-content {
-            padding: 15px;
-            font-size: 18px;
-            background: #dbdfe5;
-            margin-bottom: 15px;
+        .hero img {
+            width: 600px;
+            margin-top: 20px;
+            border-radius: 0px;
+        }
+        footer {
+        text-align: center;
+        color: white;
+        padding: 53px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-top: 50px;
         }
         
-        .demo-content.bg-alt {
-            background: #abb1b8;
-        }
     </style>
+</head>
 
-    <body>
-        <!---------------------------------- Begin the nav-bar ----------------------------------->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      data-mdb-collapse-init
-      class="navbar-toggler"
-      type="button"
-      data-mdb-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled"
-          >Disabled</a
-        >
-      </div>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="Teams.html">Teams</a>
+        </div>
+
+        <div class="logo-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball">
+            Professional Women's Basketball
+        </div>
+
+        <div class="nav-right">
+            <a href="Players.html">Players</a>
+            <a href="Expansion.html">Expansion</a>
+        </div>
+
     </div>
-  </div>
-</nav>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <!-- Badge -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span class="badge badge-pill bg-danger">1</span>
-          <span><i class="fas fa-shopping-cart"></i></span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <!-- Notification dropdown -->
-      <li class="nav-item dropdown">
-        <a
-          data-mdb-dropdown-init
-          class="nav-link dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bell"></i>
-          <span class="badge rounded-pill badge-notification bg-danger">1</span>
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </li>
-      <!-- Notification dropdown -->
-    </ul>
-  </div>
-</nav>
-        
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav me-auto">
-                        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                <a href="#" class="nav-link active">Home</a>
-                </li>
-
-                <li class="nav-item">
-                <a href="aboutMe.html" class="nav-link">About Me</a>
-                </li>
-
-                <li class="nav-item">
-                <a href="music.html" class="nav-link disabled">Music</a>
-                </li>
-
-                <li class="nav-item">
-                 <a href="mailto:your@email.com" class="nav-link">Contact</a>
-                </li>
-                        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-primary" type="button">Login</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-
-        
-        <!---------------------------------- End the nav-bar ------------------------------------->
-        <!---------Jumbotron---------------------------------------------->
-        <header class="p-5 bg-primary-subtle text-black" name="Jumbotron">
-            <h4> Bootstrap Examples</h4>
-            <p class="lead"> Let's look at the man different examples of how we can use bootstrap and what bootstrap can do!
-            </p>
-        </header>
-
-        <main>
-            <!---------Three Column Layouts------------------------------------>
-            <div class="container mt-3">
-                <!--Row with two equal columns-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="demo-content">.col-md-6</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="demo-content bg-alt">.col-md-6</div>
-                    </div>
-                </div>
-                <!--Row with two columns divided in 1:2 ratio-->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="demo-content">.col-md-4</div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="demo-content bg-alt">.col-md-8</div>
-                    </div>
-                </div>
-                <!--Row with two columns divided in 1:3 ratio-->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="demo-content">.col-md-3</div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="demo-content bg-alt">.col-md-9</div>
-                    </div>
-                </div>
-
-                <!---------Auto Layout Columns--------->
-                <div class="row">
-                    <div class="col demo-content">Column one</div>
-                    <div class="col demo-content bg-alt">Column two</div>
-                    <div class="col demo-content">Column three</div>
-                    <div class="col demo-content bg-alt">Column four</div>
-                    <div class="col demo-content">Column five</div>
-                    <div class="col demo-content bg-alt">Column six</div>
-                </div>
-
-                <!---------Flexible Layouts--------->
-                <div class="row">
-                    <div class="col-md-4 col-lg-3">
-                        <div class="demo-content">.col-md-4 .col-lg-3</div>
-                    </div>
-                    <div class="col-md-8 col-lg-6">
-                        <div class="demo-content bg-alt">.col-md-8 .col-lg-6</div>
-                    </div>
-                    <div class="col-md-12 col-lg-3">
-                        <div class="demo-content">.col-md-12 .col-lg-3</div>
-                    </div>
-                </div>
-            </div>
-
-            <!---------Table-Striped------------------------------------------->
-            <div class="container mt-3" name="table-striped">
-            </div>
-
-            <!---------List-Group---------------------------------------------->
-            <div class="container mt-3" name="list-group">
-            </div>
-
-            <!---------Form Button--------------------------------------------->
-            <div class="container mt-3 vstack" name="form-button">
-            </div>
-        </main>
-
-        <!---------------------------------- Begin the footer ------------------------------------->
-        
-            <footer class="bg-body-tertiary text-center text-lg-start">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-body">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 4</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="text-body">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 4</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-body">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 4</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="text-body">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-body">Link 4</a>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
+    <!-- Heading Section  -->
+    <div class="hero">
+        <h1> WNBA</h1>
     </div>
-    <!--Grid row-->
-  </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2020 Copyright:
-    <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-      <footer>      
-        <span class="title">Example of a Footer Title</span>
-            <div class="container py-4" id="footerTable">
-                <ul class="list-unstyled d-flex justify-content-center">
-                    <li class="mx-3">
-                        <i class="fa-brands fa-facebook fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-x-twitter fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-instagram fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-tiktok fa-3x" aria-hidden="true"></i>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <!---------------------------------- End the footer --------------------------------------->
-    </body>
 
+</body>
 </html>
+
+<footer>
+    <p>© 2026 WNBA Website. All Rights Reserved.</p>
+</footer> 
+</body>
