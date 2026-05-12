@@ -385,3 +385,33 @@ footer .container {
     margin: 0 auto;
     text-align: left;
 }
+
+
+.text-block-narrow {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.offset-card {
+    margin-left: 12px;
+}
+.fixed-card-img {
+    height: 550px;
+    object-fit: cover;
+}
+.page-title-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.list-panel {
+    border-radius: 30px;
+}
+.list-panel-light {
+    background-color: #f8f9fa;
+}
+.list-panel-dark {
+    background-color: #333;
+    color: white;
+}
+.transparent-list-group {
+    background: transparent;
+}
