@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
+
     <title>JavaScript</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/style.css">
@@ -19,96 +21,267 @@
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2">
+
     <a class="navbar-brand" href="index.html">WebDev</a>
 
     <div class="navbar-nav">
+
         <a class="nav-link" href="index.html">Home</a>
+
         <a class="nav-link" href="games.html">Games</a>
+
         <a class="nav-link active" href="script.html">JavaScript</a>
+
     </div>
+
 </nav>
 
 <!-- TITLE -->
-<div class="container mt-3">
-    <h1>My JavaScript Examples</h1>
+<div class="container mt-4">
+
+    <h1 class="text-center">
+
+        My JavaScript Examples
+
+    </h1>
+
 </div>
 
-<!-- TOP BUTTONS -->
-<div class="container mt-3">
+<!-- ROW 1 -->
+<div class="container mt-4">
+
     <div class="row">
 
+        <!-- ALERT -->
         <div class="col-md-4 text-center bg-warning p-3">
+
             <h3>Alert</h3>
-            <button class="btn btn-dark" onclick="showAlert()">Click Me</button>
+
+            <button class="btn btn-dark"
+            onclick="showAlert()">
+
+                Click Me
+
+            </button>
+
         </div>
 
+        <!-- DATE -->
         <div class="col-md-4 text-center bg-info p-3">
+
             <h3>Date</h3>
-            <button class="btn btn-dark" onclick="showDate()">Show Date</button>
+
+            <button class="btn btn-dark"
+            onclick="showDate()">
+
+                Show Date
+
+            </button>
+
             <p id="date"></p>
+
         </div>
 
+        <!-- BACKGROUND -->
         <div class="col-md-4 text-center bg-success p-3">
-            <h3>Color Change</h3>
-            <button class="btn btn-dark" onclick="changeColor()">Change Background</button>
+
+            <h3>Background Color</h3>
+
+            <button class="btn btn-dark"
+            onclick="changeColor()">
+
+                Change Color
+
+            </button>
+
         </div>
 
     </div>
+
 </div>
 
-<hr>
+<!-- ROW 2 -->
+<div class="container mt-4">
 
-<!-- LIST SECTION -->
-<div class="container">
     <div class="row">
 
         <!-- SHOPPING LIST -->
-        <div class="col-md-6">
+        <div class="col-md-6 bg-light p-3">
+
             <h3>Shopping List</h3>
 
-            <input type="text" id="item" placeholder="Enter item">
-            <button class="btn btn-primary" onclick="addItem()">Add</button>
+            <input type="text"
+            id="item"
+            placeholder="Enter item">
+
+            <button class="btn btn-primary"
+            onclick="addItem()">
+
+                Add
+
+            </button>
 
             <ul id="shoppingList"></ul>
+
         </div>
 
         <!-- FOOD LIST -->
-        <div class="col-md-6">
+        <div class="col-md-6 bg-light p-3">
+
             <h3>Food List</h3>
 
             <ol id="foodList">
+
                 <li>Pizza</li>
                 <li>Burgers</li>
                 <li>Tacos</li>
                 <li>Fries</li>
+
             </ol>
 
-            <button class="btn btn-danger" onclick="changeFirst()">Change First</button>
-            <button class="btn btn-info" onclick="changeAll()">Change All</button>
+            <button class="btn btn-danger"
+            onclick="changeFirst()">
+
+                Change First
+
+            </button>
+
+            <button class="btn btn-info"
+            onclick="changeAll()">
+
+                Change All
+
+            </button>
+
         </div>
 
     </div>
+
+</div>
+
+<!-- ROW 3 -->
+<div class="container mt-4">
+
+    <div class="row">
+
+        <!-- CHANGE TEXT -->
+        <div class="col-md-6 text-center bg-secondary text-white p-3">
+
+            <h3>Change Text</h3>
+
+            <p id="textChange">
+
+                I love JavaScript!
+
+            </p>
+
+            <button class="btn btn-warning"
+            onclick="changeText()">
+
+                Change Text
+
+            </button>
+
+        </div>
+
+        <!-- FONT SIZE -->
+        <div class="col-md-6 text-center bg-dark text-white p-3">
+
+            <h3>Font Size</h3>
+
+            <p id="fontText">
+
+                Make me bigger!
+
+            </p>
+
+            <button class="btn btn-success"
+            onclick="changeFont()">
+
+                Change Font
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ROW 4 -->
+<div class="container mt-4 mb-5">
+
+    <div class="row">
+
+        <!-- HIDE TEXT -->
+        <div class="col-md-6 text-center bg-primary text-white p-3">
+
+            <h3>Hide Text</h3>
+
+            <p id="hideText">
+
+                You can hide me!
+
+            </p>
+
+            <button class="btn btn-light"
+            onclick="hideText()">
+
+                Hide
+
+            </button>
+
+        </div>
+
+        <!-- GREETING -->
+        <div class="col-md-6 text-center bg-danger text-white p-3">
+
+            <h3>Greeting</h3>
+
+            <input type="text"
+            id="nameInput"
+            placeholder="Enter your name">
+
+            <button class="btn btn-light"
+            onclick="greetUser()">
+
+                Submit
+
+            </button>
+
+            <p id="greeting"></p>
+
+        </div>
+
+    </div>
+
 </div>
 
 <!-- JAVASCRIPT -->
 <script>
 
-    // ALERT FUNCTION
+    // FEATURE 1 - ALERT
     function showAlert() {
+
         alert("Go Sabers!");
+
     }
 
-    // DATE FUNCTION
+    // FEATURE 2 - SHOW DATE
     function showDate() {
+
         document.getElementById("date").innerHTML = Date();
+
     }
 
-    // BACKGROUND COLOR FUNCTION
+    // FEATURE 3 - CHANGE BACKGROUND COLOR
     function changeColor() {
+
         document.body.style.backgroundColor = "lightblue";
+
     }
 
-    // ADD ITEM FUNCTION
+    // FEATURE 4 - ADD SHOPPING ITEM
     function addItem() {
 
         let input = document.getElementById("item");
@@ -116,27 +289,96 @@
         if (input.value === "") return;
 
         let li = document.createElement("li");
+
         li.textContent = input.value;
 
         document.getElementById("shoppingList").appendChild(li);
 
         input.value = "";
+
     }
 
-    // CHANGE FIRST ITEM
+    // FEATURE 5 - CHANGE FIRST FOOD ITEM
     function changeFirst() {
-        document.querySelector("#foodList li").style.backgroundColor = "red";
+
+        document.querySelector("#foodList li").style.backgroundColor =
+        "red";
+
     }
 
-    // CHANGE ALL ITEMS (LOOP)
+    // FEATURE 6 - CHANGE ALL FOOD ITEMS
     function changeAll() {
 
         let items = document.querySelectorAll("#foodList li");
 
         for (let i = 0; i < items.length; i++) {
+
             items[i].style.backgroundColor = "yellow";
+
         }
+
     }
+
+    // FEATURE 7 - CHANGE TEXT
+    function changeText() {
+
+        document.getElementById("textChange").innerHTML =
+        "JavaScript is awesome!";
+
+    }
+
+    // FEATURE 8 - CHANGE FONT SIZE
+    function changeFont() {
+
+        document.getElementById("fontText").style.fontSize =
+        "40px";
+
+    }
+
+    // FEATURE 9 - HIDE TEXT
+    function hideText() {
+
+        document.getElementById("hideText").style.display =
+        "none";
+
+    }
+
+    // FEATURE 10 - GREET USER
+    function greetUser() {
+
+        let name =
+        document.getElementById("nameInput").value;
+
+        document.getElementById("greeting").innerHTML =
+        "Hello " + name + "!";
+
+    }
+
+    // SCROLLING TITLE
+    var space = " ";
+    var pos = 0;
+    var msg = "User 19 JavaScript";
+
+    function Scroll() {
+
+        document.title =
+        msg.substring(pos, msg.length)
+        + space +
+        msg.substring(0, pos);
+
+        pos++;
+
+        if (pos > msg.length) {
+
+            pos = 0;
+
+        }
+
+        window.setTimeout("Scroll()", 150);
+
+    }
+
+    Scroll();
 
 </script>
 
