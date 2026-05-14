@@ -28,68 +28,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="JS/script.js"></script>
-    <script src="JS/SampleJS.js"></script>
-    <script>
-        function myFunction() {
-        const x = document.getElementById("fname");
-        x.value = x.value.toUpperCase();
-        }
-    </script>
-    <script>
-        function writeMessage() {
-        document.forms[0].mySecondInput.value = document.forms[0].myInput.value;
-        }
-    </script>
-    <script>
-        function confirmInput() {
-        fname = document.forms[0].fname.value;
-        alert("Hello " + fname + "! You will now be redirected to www.w3Schools.com");
-        }
-    </script>
-
+    
     <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
 
     <!-- Custom styles for this template -->
     <style type="text/css">
 
     </style>
+    <script>
+
+    function addNumbers() {
+
+        let num1 = Number(document.getElementById("addOne").value);
+        let num2 = Number(document.getElementById("addTwo").value);
+
+        let answer = num1 + num2;
+
+        document.getElementById("output").innerHTML = answer;
+    }
+
+    function multiplyNumbers() {
+
+        let num1 = Number(document.getElementById("multiplyOne").value);
+        let num2 = Number(document.getElementById("multiplyTwo").value);
+
+        let answer = num1 * num2;
+
+        document.getElementById("output").innerHTML = answer;
+    }
+
+    function findC() {
+
+        let a = Number(document.getElementById("sideA").value);
+        let b = Number(document.getElementById("sideB").value);
+
+        let c = Math.sqrt((a * a) + (b * b));
+
+        document.getElementById("output").innerHTML = c;
+    }
+
+</script>
 </head>
 
 <body>
-     <center><p id="textChange"> My name is User ##</p></center>
-    <center><button type="button" onclick="changeText()">Click if you like</button></center>
-    <body>
-        <h1>JavaScript HTML Events</h1>
-        <h2>The onblur Attribute</h2>
-
-        Enter your name: <input type="text" id="fname" onblur="myFunction()">
-
-        <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
-
-</body>
-<body>
-
-        <h1>JavaScript HTML Events</h1>
-        <h2>The onkeyup Attribute</h2>
-
-        <p>An onkeyup event occurs when the a keyboard key is on its way UP:</p>
-
-        <form>
-        Enter your name:
-        <input type="text" name="myInput" onkeyup="writeMessage()" size="20">
-        <input type="text" name="mySecondInput" size="20">
-    </form>
-</body>
-<body>
-        <h1>JavaScript HTML Events</h1>
-        <h2>The onsubmit Attribute</h2>
-
-        <form onsubmit="confirmInput()" action="https://www.w3schools.com/">
-        Enter your name: <input id="fname" type="text" size="20">
-        <input type="submit">
-</form>
-
-</body>
+  
 
     <!---------------------------------- Begin the nav-bar ------------->
     <div class="menu">
@@ -120,7 +102,6 @@
     </div>
     <!---------------------------------- End the nav-bar ------------->
 
-       
     <main class="m-3" id="content">
         <h1 class="text-left my-3">My JavaScript Examples</h1>
         <!-- Edit this line for the title of your page -->
@@ -143,6 +124,43 @@
         </p>
     </footer>
     <!---------------------------------- End the footer ------------->
+    <body>
+
+    <!-- Addition -->
+    <input id="addOne" type="text">
+    +
+    <input id="addTwo" type="text">
+
+    <button onclick="addNumbers()">add</button>
+
+    <br><br><br>
+
+    <!-- Multiplication -->
+    <input id="multiplyOne" type="text">
+    *
+    <input id="multiplyTwo" type="text">
+
+    <button onclick="multiplyNumbers()">multiply</button>
+
+    <br><br><br>
+
+    <!-- Pythagorean Theorem -->
+    <h1>Pythagorean Theorem</h1>
+
+    a=
+    <input id="sideA" type="text">
+
+    <br><br>
+
+    b=
+    <input id="sideB" type="text">
+
+    <br><br>
+
+    <button onclick="findC()">Find C</button>
+
+    <h2 id="output"></h2>
+
 </body>
 
 </html>
