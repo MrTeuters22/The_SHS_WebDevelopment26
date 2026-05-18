@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Version 5.0
-    Name:
-    Date Completed:
+    Name:Bennett Gordon
+    Date Completed:5/13/26
 -->
 
 <head>
@@ -27,8 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="JS/script.js"></script>
-
+    <script src="JS/SampleJS.js"></script>
     <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
 
     <!-- Custom styles for this template -->
@@ -36,8 +35,8 @@
 
     </style>
 </head>
-
-<body>
+<!-- w3schools -->
+<body onload="loadFunction()"> 
     <!---------------------------------- Begin the nav-bar ------------->
     <div class="menu">
         <nav class="navbar navbar-expand-md p-2 navbar-dark bg-dark">
@@ -66,18 +65,42 @@
         </nav>
     </div>
     <!---------------------------------- End the nav-bar ------------->
-
+    <script> 
+    var x = document.getElementById("foo");
+    if (x) {
+        x.textContent = "bar"
+    } 
+    </script>
     <main class="m-3" id="content">
         <h1 class="text-left my-3">My JavaScript Examples</h1>
         <!-- Edit this line for the title of your page -->
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4" style="background-color:yellow;">PUT YOUR CODE HERE</div>
-                <div class="col-sm-4" style="background-color:orange;">PUT YOUR CODE HERE</div>
+                <div class="col-sm-4" style="background-color:yellow;"><center><p id="textChange"> My name is User 09</p></center></div>
+                <div class="col-sm-4" style="background-color:orange;"><center><button type="button" onclick="changeText()">Click if you like</button></center></div>
                 <div class="col-sm-4" style="background-color:yellow;">PUT YOUR CODE HERE</div>
             </div>
         </div>
+        <!-- everything below this line is taken from w3schools -->
+        Enter your name (UpperCase when typing): <input type="text" id="fname" onkeyup="keyUpFunction()">
+        <input type="text" onkeypress="pressKeyFunction()">
+        <form>
+            Choose which browser you prefer:
+            <select id="browsers" onchange="preferedBrowser()">
+                <option value="Chrome">Chrome</option>
+                <option value="Internet Explorer">Internet Explorer</option>
+                <option value="Firefox">Firefox</option>
+            </select>
+        </form>
+        <p onmousedown="clickColorFunction(this,'red')" onmouseup="clickColorFunction(this,'green')">
+            Special Text That Changes color when clicked
+        </p>
+        <p id="demo">Special Date Magic</p>
+        <button type="button" onclick="displayDate()">Display Date</button>
+        Enter your name (UpperCase when Leave field): <input type="text" id="gname" onchange="upperCase()">
+        <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Special Color Hover Text</h1>
+        <!-- everything above this line is taken from w3schools -->
     </main>
     <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
 
