@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
+        let answer = randomInt(1, 200);
+        <!--script>
             function isNegative(){
                 //Your code for exercise one here
-                if (Number(document.getElementById("num").value) < 0){
+                if (Number(document.getElementById("numb").value) < 0){
                     document.getElementById("outError").innerHTML = "The number is negative.";
                 } else {
                     document.getElementById("outError").innerHTML = "The number is not negative.";
                 }
             }
-
+        </script>
+        <script>
             function isNegOrNon(){
                 //Your code for exercise two here
-                if (Number(document.getElementById("num").value) < 0){
+                if (Number(document.getElementById("numb").value) < 0){
                     document.getElementById("outError").innerHTML = "The number is negative.";
                 } else if (Number(document.getElementById("num").value) == 0){
                     document.getElementById("outError").innerHTML = "The number is zero.";
@@ -21,10 +23,11 @@
                     document.getElementById("outError").innerHTML = "The number is positive.";
                 }
             }
-
+        </script>
+        <script>
             function isNegOrNonOrNan(){
                 //Your code for exercise three
-                if (isNaN(Number(document.getElementById("num").value))){
+                if (isNaN(Number(document.getElementById("numb").value))){
                     document.getElementById("outError").innerHTML = "The input is not a number.";
                 } else if (Number(document.getElementById("num").value) < 0){
                     document.getElementById("outError").innerHTML = "The number is negative.";
@@ -33,8 +36,11 @@
                 } else {
                     document.getElementById("outError").innerHTML = "The number is positive.";
                 }
+            }
+        </script>
+        <script>
             function higherOrLower(){
-                let num = Number(document.getElementById("num").value);
+                let num = Number(document.getElementById("numb").value);
                 const val = randomInt(1, 20);
                     if (num > 10){
                         document.getElementById("outError").innerHTML = "The number is higher than 10.";
@@ -43,9 +49,20 @@
                     } else {
                         document.getElementById("outError").innerHTML = "The number is equal to 10.";
                     }
+            }
+        </script-->
+        <script>
+            let answer = randomInt(1, 200);
+            function checkGuess(){
+                let num = Number(document.getElementById("num").value);
+                if (num > answer){
+                    document.write.getElementById("outError2").innerHTML = "Your guess is too high.";
+                } else if (num < answer){
+                    document.write.getElementById("outError").innerHTML = "Your guess is too low.";
+                } else {
+                    document.write.getElementById("outError2").innerHTML = "Congratulations! You guessed the number!";
                 }
             }
-
         </script>
 
     </head>
@@ -53,14 +70,17 @@
     <body>
         <main>
             Number:
-            <input id="num" type="text"/>
+            <input id="numb" type="text"/>
             <input id="exerciseOne" onclick="isNegative()" type="button" value="Exercise One" />
             <input id="exerciseTwo" onclick="isNegOrNon()" type="button" value="Exercise Two" />
             <input id="exerciseThree" onclick="isNegOrNonOrNaN()" type="button" value="Exercise Three" />
             <input id="exerciseFour" onclick="higherOrLower()" type="button" value="Exercise Four" />
         
-            <div id="outError"></div>
-            
+            <h2>Higher or Lower</h2>
+            Guess a number between 1 and 200:
+
+            <input id="num" type="text"/><button onclick="checkGuess()">Submit</button>
+            <div id="outError2">Output</div>
 
         </main>
     </body>
