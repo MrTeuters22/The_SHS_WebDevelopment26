@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        let answer = randomInt(1, 200);
+        <title>Higher or Lower</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>let answer = randomInt(1, 200);
+        </script>
         <!--script>
             function isNegative(){
                 //Your code for exercise one here
@@ -52,15 +56,15 @@
             }
         </script-->
         <script>
-            let answer = randomInt(1, 200);
+            
             function checkGuess(){
                 let num = Number(document.getElementById("num").value);
                 if (num > answer){
-                    document.write.getElementById("outError2").innerHTML = "Your guess is too high.";
+                    alert( "Your guess is too high.");
                 } else if (num < answer){
-                    document.write.getElementById("outError").innerHTML = "Your guess is too low.";
+                    alert("Your guess is too low.");
                 } else {
-                    document.write.getElementById("outError2").innerHTML = "Congratulations! You guessed the number!";
+                    alert("Congratulations! You guessed the number!");
                 }
             }
         </script>
