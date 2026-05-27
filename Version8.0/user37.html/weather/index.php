@@ -1,8 +1,8 @@
 <?php
-$apiKey = "API KEY"; //You will need to add in the 
+$apiKey = "8f6b77de57b91cce8bfad294b375695c"; //You will need to add in the 
 $cityId = "5046997"; //5046997 Shakopee City Id
-$units = "metric";//metric-Celcius  imperial-Farhenheit
-if ($units == 'metric'){//Changes the $temp varaible to match 
+$units = "imperial";//metric-Celcius  imperial-Farhenheit
+if ($units == 'metric'){//Changes the $temp varaible to match
     $temp = "C";
 }
 else {
@@ -70,7 +70,19 @@ span.min-temperature {
 </head>
 <body>
 
-    <div class="report-container">
+<?php
+$bgColor = "#D9F2D9";
+$maxTemp = isset($data->main->temp_max) ? $data->main->temp_max : 0;
+if ($maxTemp >= 80) {
+    $bgColor = "#F8D7DA";
+} elseif ($maxTemp >= 60) {
+    $bgColor = "#FFF3CD";
+} else {
+    $bgColor = "#D9ECFF";
+}
+?>
+
+    <div class="report-container" style="background-color: <?php echo $bgColor; ?>;">
         <h2><?php echo $data->name; ?> Weather Status</h2>
         <div class="time">
             <div><?php echo date("l g:i a", $currentTime); ?></div>

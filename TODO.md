@@ -1,12 +1,16 @@
 # TODO
 
-## JS fixes (Version 5.0 / user37.html)
-- [x] Remove missing `JS/script.js` include from `Version5.0/user37.html/script.html`.
-- [x] Resolve `changeText()` function name collision between inline code in `script.html` and `JS/SampleJS.js`.
-- [x] Fix event handler wiring issues (`onchange="changeText"` -> call with parentheses).
-- [x] Add missing DOM elements referenced by JS examples: `#title`, `#date`, `#image`.
-- [x] Add missing triggers (buttons/inputs) for examples so each function is actually testable.
-- [x] Re-check for any remaining undefined ids/functions referenced by handlers.
-- [ ] Manual/browser verification steps.
+## Weather app updates (Version 8.0)
+- [x] Edit `Version8.0/user37.html/weather/index.php` to use Fahrenheit (imperial) instead of Celsius.
+- [x] Add conditional formatting (change background color) based on temperature.
+- [ ] Keep code changes minimal.
 
 
+## Timezone update (MAMP)
+- [ ] In MAMP php.ini: change `date.timezone = "America/Los_Angeles"` to `date.timezone = "US/Central"`.
+
+## Embed into Version 7.0 site
+- [ ] Find the correct Version 7.0 user page and embed the weather app from `weather/index.php` into it.
+
+## Verification
+- [ ] Run localhost `http://127.0.0.1:8080/` and confirm: Central timezone, Fahrenheit, conditional background.
