@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TITLE HERE</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <!-- CSS -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Animate -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <!-- Custom -->
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <!-- Custom Inline Styling to beautify the page -->
+        <style>
+            :root{--brand:#0d6efd;--muted:#6c757d;--card:#ffffff;--bg:#f6f9ff}
+            body{background:linear-gradient(180deg,#f8fbff 0%,var(--bg) 100%);font-family:Inter,Helvetica,Arial,sans-serif;color:#222}
+            .hero{padding:3rem 1rem;background:linear-gradient(90deg,rgba(13,110,253,0.08),rgba(29,78,216,0.02));border-bottom:1px solid rgba(13,110,253,0.08)}
+            .brand-title{font-weight:700;color:var(--brand);letter-spacing:0.4px}
+            .lead-sub{color:var(--muted);margin-top:.25rem}
+            .resource-table{width:100%;border-collapse:separate;border-spacing:0 0.75rem}
+            .resource-table thead td{font-weight:700;padding:1rem;background:transparent;color:var(--muted);border-top:1px solid transparent}
+            .resource-table tbody tr{background:var(--card);box-shadow:0 6px 18px rgba(13,110,253,0.04);border-radius:8px}
+            .resource-table td{padding:1rem;border:1px solid rgba(13,110,253,0.06);vertical-align:middle}
+            .resource-topic{font-weight:600;color:#08306b;width:180px}
+            nav.navbar{box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+            footer{padding:2rem;text-align:center;color:var(--muted);font-size:.9rem}
+            .btn-primary{background:linear-gradient(90deg,var(--brand),#1e7be8);border:0}
+            @media (max-width:768px){.resource-table td{display:block;width:100%;box-sizing:border-box}}
+        </style>
+
+        <!-- JavaScript -->
+        <!-- These are needed to get the responsive menu to work -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">PeaksPrehab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <li class="nav-item">
+                        <a href="1splash.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="2resourcehub.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="3coaching.html" class="nav-link">Coaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spirituality.html" class="nav-link">Spirituality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:smailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link active" tabindex="-1">Contact</a>
+                    </li>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-primary" type="button">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                    <div>
+                        <h1 class="brand-title">PeaksPrehab Resource Hub</h1>
+                        <p class="lead-sub">Curated wellness guides, communities and tools to help you thrive — simple, beautiful, and trustworthy.</p>
+                    </div>
+                    <div class="text-end mt-3 mt-md-0">
+                        <a class="btn btn-outline-primary me-2" href="mailto:peaksprehab@gmail.com">Contact Us</a>
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <div class="container my-5">
+    <table class="resource-table w-100">
+        <thead>
+            <tr>
+                <td>Topic</td>
+                <td>Context</td>
+            </tr>
+        </thead>
+            <tr>
+                <td>Coaching</td>
+                <td>Wellness coaching is a collaborative relationship that empowers clients to achieve sustainable lifestyle changes across multiple health dimensions. It bridges the gap between medical advice and daily execution.</td>
+            </tr>
+            <tr>
+                <td>Blog</td>
+                <td>Wellness blogging is a digital publishing practice that translates complex medical and lifestyle science into accessible, engaging consumer content. It bridges the gap between clinical research and daily public health literacy.</td>
+            </tr>
+            <tr>
+                <td>Business</td>
+                <td>The wellness business landscape represents a multi-trillion dollar economy driven by a global shift toward preventative healthcare and lifestyle optimization. It bridges the gap between commercial market viability and genuine consumer health improvement.</td>
+            </tr>
+            <tr>
+                <td>Chatrooms</td>
+                <td>Wellness chatrooms are real-time, peer-to-peer digital environments that offer immediate social connection and mutual accountability for individuals pursuing health goals. They bridge the gap between isolated individual effort and collective community support.</td>
+            </tr>
+            <tr>
+                <td>Survivorship</td>
+                <td>Survivorship is the complex, lifelong phase of recovery that begins immediately following the primary treatment of a life-altering illness. It bridges the gap between acute clinical medical management and the long-term reclamation of physical and emotional autonomy.</td>
+            </tr>
+            <tr>
+                <td>Events</td>
+                <td>Wellness events are structured gatherings, workshops, or retreats that provide immersive health education and experiential learning in a shared physical or virtual space [skills:load]. They bridge the gap between passive consumption of health information and active, real-time community engagement.</td>
+            </tr>
+            <tr>
+                <td>Fitness</td>
+                <td>Fitness is the structured cultivation of physical movement designed to enhance musculoskeletal strength, cardiovascular endurance, and overall biological resilience. It bridges the gap between sedentary modern lifestyles and functional, long-term physical independence.</td>
+            </tr>
+            <tr>
+                <td>Mental Health</td>
+                <td>Mental health is the foundational pillar of overall wellness, encompassing an individual's emotional, psychological, and social well-being. It bridges the gap between involuntary physiological stress responses and conscious, resilient lifestyle choices.</td>
+            </tr>
+            <tr>
+                <td>Nutrition</td>
+                <td>Nutrition is the biochemical application of utilizing whole foods as proactive fuel to optimize human physiological function and metabolic health. It bridges the gap between restrictive, short-term dieting and sustainable, long-term cellular nourishment.</td>
+            </tr>
+            <tr>
+                <td>Spirituality</td>
+                <td>Spirituality is the internal pursuit of existential meaning, purposeful living, and connection to a reality greater than oneself. It bridges the gap between chaotic daily external demands and a grounded, resilient sense of inner peace.</td>
+            </tr>
+    </table>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 PeaksPrehab. All rights reserved. Crafted with care.</p>
+        </div>
+    </footer>
+    </body>
+    </html>
