@@ -1,0 +1,132 @@
+/* Peaks Prehab Custom CSS */
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4c1d95; /* Deep purple */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Custom Header / Splash Banner */
+.splash-container {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #4c1d95 0%, #0d9488 100%);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.splash-container h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.splash-container p {
+    color: #e2e8f0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #2e1065 !important; /* Dark purple */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #14b8a6 !important; /* Cyan accent */
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #14b8a6 !important;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #4c1d95;
+    text-align: left;
+}
+
+/* Custom Buttons overriding bootstrap defaults */
+.btn-primary {
+    background-color: #4c1d95 !important;
+    border-color: #4c1d95 !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #3b0764 !important;
+    border-color: #3b0764 !important;
+}
+
+.btn-success {
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
+    color: white !important;
+}
+
+.btn-success:hover {
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
+}
+
+/* Custom Footer */
+footer {
+    padding: 30px 0;
+    background-color: #1f2937;
+    color: #9ca3af;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer p {
+    color: #9ca3af;
+    text-align: center;
+    margin: 0;
+}
+
+footer a {
+    color: #14b8a6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Custom lists and forms styling */
+.list-group-item-action {
+    color: #4c1d95;
+}
+
+.list-group-item-action:hover {
+    background-color: #f3e8ff;
+    color: #3b0764;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Survivorship - Peaks Prehab</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cancer Survivorship support at Peaks Prehab">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="1splash.html" class="navbar-brand">Peaks Prehab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="1splash.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="2resourcehub.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="3coaching.html" class="nav-link">Coaching</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                    <li class="nav-item"><a href="chatrooms.html" class="nav-link">Chatrooms</a></li>
+                    <li class="nav-item"><a href="csurvivorship.html" class="nav-link active">Survivorship</a></li>
+                    <li class="nav-item"><a href="mentalhealth.html" class="nav-link">Mental Health</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li class="nav-item"><a href="fitness.html" class="nav-link">Fitness</a></li>
+                    <li class="nav-item"><a href="spirituality.html" class="nav-link">Spirituality</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="mailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2>Cancer Survivorship Support</h2>
+                <p class="lead text-muted">A one-stop resource to support cancer survivors before, during, and after treatment.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Checklist Column -->
+            <div class="col-md-7 mb-4">
+                <div class="card p-4 shadow-sm">
+                    <h3>Recovery Prehab Checklist</h3>
+                    <p class="text-muted small mt-1">Check off each step as you complete it. Your progress updates automatically below.</p>
+
+                    <ul class="list-group list-group-flush mt-3" id="checklistItems">
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input checklist-box" type="checkbox" id="check1">
+                                <label class="form-check-label" for="check1">Talk to your doctor about a prehab plan</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input checklist-box" type="checkbox" id="check2">
+                                <label class="form-check-label" for="check2">Start gentle daily movement (walking 10+ min)</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input checklist-box" type="checkbox" id="check3">
+                                <label class="form-check-label" for="check3">Set up a nutrition plan with adequate protein</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input checklist-box" type="checkbox" id="check4">
+                                <label class="form-check-label" for="check4">Join a peer support group or chatroom</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input checklist-box" type="checkbox" id="check5">
+                                <label class="form-check-label" for="check5">Book a coaching session with Sarah</label>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Progress Bar -->
+                    <div class="mt-4">
+                        <label class="form-label fw-bold">Your Progress</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-success" role="progressbar" id="progressBar"
+                                style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                        <p id="progressMsg" class="text-muted small mt-2">Complete steps above to track your prehab progress.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Sidebar -->
+            <div class="col-md-5 mb-4">
+                <div class="card p-4 shadow-sm mb-4">
+                    <h4 class="card-title text-center">Survivorship Resources</h4>
+                    <div class="list-group mt-2">
+                        <a href="https://www.cancer.org/cancer/survivorship.html" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-ribbon me-2" style="color:#e83e8c;"></i>American Cancer Society
+                        </a>
+                        <a href="https://www.cancercare.org" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-heart-pulse me-2 text-danger"></i>CancerCare Support
+                        </a>
+                        <a href="https://www.livestrong.org" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-person-running me-2 text-warning"></i>Livestrong Foundation
+                        </a>
+                        <a href="chatrooms.html" class="list-group-item list-group-item-action">
+                            <i class="fa-solid fa-users me-2 text-primary"></i>Peaks Prehab Peer Chat
+                        </a>
+                    </div>
+                </div>
+                <div class="card p-3 shadow-sm text-center">
+                    <p class="mb-2 small text-muted">Need personalized guidance on your recovery journey?</p>
+                    <a href="3coaching.html" class="btn btn-primary btn-sm w-full">Book a Coaching Call</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Webpage made by <a href="1splash.html">Bauke Nijs</a> | &copy; 2026 Peaks Prehab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Checklist Progress JS -->
+    <script>
+        var checkboxes = document.querySelectorAll('.checklist-box');
+        var total = checkboxes.length;
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                var checked = document.querySelectorAll('.checklist-box:checked').length;
+                var percent = Math.round((checked / total) * 100);
+                var bar = document.getElementById('progressBar');
+                var msg = document.getElementById('progressMsg');
+
+                bar.style.width = percent + '%';
+                bar.setAttribute('aria-valuenow', percent);
+                bar.innerText = percent + '%';
+
+                if (percent === 100) {
+                    msg.innerText = 'Great job! You have completed all prehab steps!';
+                    msg.style.color = '#198754';
+                } else {
+                    msg.innerText = checked + ' of ' + total + ' steps completed. Keep going!';
+                    msg.style.color = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

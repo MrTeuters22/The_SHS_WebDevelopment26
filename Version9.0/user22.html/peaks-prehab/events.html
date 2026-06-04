@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Peaks Prehab</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Upcoming events and workshops at Peaks Prehab">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="1splash.html" class="navbar-brand">Peaks Prehab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="1splash.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="2resourcehub.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="3coaching.html" class="nav-link">Coaching</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                    <li class="nav-item"><a href="chatrooms.html" class="nav-link">Chatrooms</a></li>
+                    <li class="nav-item"><a href="csurvivorship.html" class="nav-link">Survivorship</a></li>
+                    <li class="nav-item"><a href="mentalhealth.html" class="nav-link">Mental Health</a></li>
+                    <li class="nav-item"><a href="nutrition.html" class="nav-link">Nutrition</a></li>
+                    <li class="nav-item"><a href="fitness.html" class="nav-link">Fitness</a></li>
+                    <li class="nav-item"><a href="spirituality.html" class="nav-link">Spirituality</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+                    <li class="nav-item"><a href="mailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2>Upcoming Events</h2>
+                <p class="lead text-muted">Join us for webinars, group sessions, and community workshops. Click RSVP to save your spot!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Event 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white">
+                        <strong>June 12, 2026 &nbsp;|&nbsp; 10:00 AM – 11:00 AM</strong>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5">Intro to Prehab Webinar</h4>
+                        <p class="card-text text-muted small">Sarah walks you through how to build a prehab program before surgery or injury treatment. Perfect for anyone just starting their wellness journey.</p>
+                        <p class="small"><i class="fa-solid fa-location-dot me-1 text-primary"></i>Online (Zoom) &nbsp;|&nbsp; <i class="fa-solid fa-users me-1 text-success"></i><span id="rsvp1Count">12</span> attending</p>
+                        <button class="btn btn-primary btn-sm" id="rsvpBtn1" onclick="rsvpEvent(1)">RSVP</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-success text-white">
+                        <strong>June 18, 2026 &nbsp;|&nbsp; 6:00 PM – 7:00 PM</strong>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5">Cancer Survivors Movement Class</h4>
+                        <p class="card-text text-muted small">A gentle group exercise session designed specifically for cancer survivors. Low impact, guided by a certified instructor.</p>
+                        <p class="small"><i class="fa-solid fa-location-dot me-1 text-success"></i>Shakopee Community Center &nbsp;|&nbsp; <i class="fa-solid fa-users me-1 text-success"></i><span id="rsvp2Count">7</span> attending</p>
+                        <button class="btn btn-success btn-sm" id="rsvpBtn2" onclick="rsvpEvent(2)">RSVP</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header" style="background-color: #6366f1; color: white;">
+                        <strong>June 25, 2026 &nbsp;|&nbsp; 7:00 PM – 8:00 PM</strong>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5">Nutrition Q&amp;A Session</h4>
+                        <p class="card-text text-muted small">Ask Sarah your nutrition questions live! Focus on anti-inflammatory eating, pre-op prep meals, and fueling your recovery.</p>
+                        <p class="small"><i class="fa-solid fa-location-dot me-1" style="color:#6366f1;"></i>Online (Zoom) &nbsp;|&nbsp; <i class="fa-solid fa-users me-1 text-success"></i><span id="rsvp3Count">5</span> attending</p>
+                        <button class="btn btn-sm" style="background-color:#6366f1; color:white;" id="rsvpBtn3" onclick="rsvpEvent(3)">RSVP</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <strong>July 3, 2026 &nbsp;|&nbsp; 9:00 AM – 10:00 AM</strong>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5">Mind-Body Meditation Workshop</h4>
+                        <p class="card-text text-muted small">Learn simple breathing and meditation techniques to manage recovery anxiety, pain, and stress. All skill levels welcome.</p>
+                        <p class="small"><i class="fa-solid fa-location-dot me-1 text-warning"></i>Online (Zoom) &nbsp;|&nbsp; <i class="fa-solid fa-users me-1 text-success"></i><span id="rsvp4Count">3</span> attending</p>
+                        <button class="btn btn-warning btn-sm text-dark" id="rsvpBtn4" onclick="rsvpEvent(4)">RSVP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Webpage made by <a href="1splash.html">Bauke Nijs</a> | &copy; 2026 Peaks Prehab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple RSVP JS -->
+    <script>
+        var rsvpState = { 1: false, 2: false, 3: false, 4: false };
+
+        function rsvpEvent(id) {
+            var countEl = document.getElementById('rsvp' + id + 'Count');
+            var btnEl = document.getElementById('rsvpBtn' + id);
+            var current = parseInt(countEl.innerText);
+
+            if (!rsvpState[id]) {
+                countEl.innerText = current + 1;
+                btnEl.innerText = 'Cancel RSVP';
+                rsvpState[id] = true;
+                alert('You are signed up! We will send details to your email closer to the event date.');
+            } else {
+                countEl.innerText = current - 1;
+                btnEl.innerText = 'RSVP';
+                rsvpState[id] = false;
+            }
+        }
+    </script>
+</body>
+</html>
