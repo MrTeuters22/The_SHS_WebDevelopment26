@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const randNum = Math.floor(Math.random() * 100 + 1);
+            function testRandom(){
+                alert(randNum);
+            
+          if(document.getElementById("exerciseTwo").value > randNum){
+                alert("Lower");
+             document.getElementById("exerciseTwo").value = "";
+            }
+            else if(document.getElementById("exerciseTwo").value < randNum){
+                alert("Higher");
+              document.getElementById("exerciseTwo").value = "";
+            }
+            else if(document.getElementById("exerciseTwo").value == randNum){
+                alert("Yes");
+           document.getElementById("exerciseTwo").value = "";
+            }
+
+        </script>
+    </head>
+    <body>
+        <main>
+            <input id="exerciseOne" onclick="testRandom()" type="button" value="Test Random Number" />
+<input id="exerciseTwo"  type="text" value="Higher or lower" />
+       <input id="exerciseThree" onclick="SubmitEvent()" type="button" value="Submit Guess" />
+    
+</main>
+    </body>
+
+
+
+
+
+</html>

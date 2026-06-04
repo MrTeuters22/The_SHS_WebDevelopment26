@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+function addWords(){
+let a = document.getElementById("addWord1").value;
+let b = document.getElementById("addWord2").value;
+let c = document.getElementById("addWord3").value;
+let d = document.getElementById("addWord4").value;
+let e = document.getElementById("addWord5").value;
+let f = document.getElementById("addWord6").value;
+document.write("This weekend I am going camping with " + a + ". I packed my lantern, sleeping bag, and " + b + ". I am so " + c + " to " + d + " in a tent. I am " + e + " we might see a " + f + ", they are kind of dangerous.");
+}
+  </script>
+    </head>
+<body>
+  <p>This weekend I am going camping with ________________. I packed my lantern, sleeping bag, and ________________. I am so ________________ to ________________ in a tent. I am ________________ we might see a ________________, they are kind of dangerous.</p>
+<div style="grid-row: 3;">
+    <main>
+    <input type="text" id="addWord1" placeholder="Number">
+    <input type="text" id="addWord2" placeholder="Measure Of Time">
+    <input type="text" id="addWord3" placeholder="Mode Of Transportation">
+    <input type="text" id="addWord4" placeholder="Adjective">
+    <input type="text" id="addWord5" placeholder="Adjective">
+    <input type="text" id="addWord6" placeholder="Noun">
+    <button onclick="addWords()">Add Words</button>
+    </main>
+</body>
+</html>

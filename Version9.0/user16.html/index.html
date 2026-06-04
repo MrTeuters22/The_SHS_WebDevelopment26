@@ -5,13 +5,169 @@
     -->
     <head>
         
-        <title>Web Development User #00</title>
+        <h1><center>The Math</center></h1> <h4><center>+ geometry</center></h4> <h6><center>+ calculator</center></h6>
     
     </head>
     
     <body>
+ <p>Quadratic Formula</p>
+        <main>
+    <section>
+        <label>Enter a: <input id="a" type="number" step="any"></label><br>
+        <label>Enter b: <input id="b" type="number" step="any"></label><br>
+        <label>Enter c: <input id="c" type="number" step="any"></label><br>
+        <button type="button" onclick="solveQuadratic()">Solve</button>
+        <div id="result"></div>
+    </section>
+
+    <script>
+    function solveQuadratic() {
+        const a = Number(document.getElementById('a').value);
+        const b = Number(document.getElementById('b').value);
+        const c = Number(document.getElementById('c').value);
+        const result = document.getElementById('result');
+
+        if (a === 0) {
+            result.textContent = 'Coefficient a must not be 0.';
+            return;
+        }
+
+        const discriminant = b * b - 4 * a * c;
+
+        if (discriminant > 0) {
+            const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            result.textContent = `Two real roots: ${root1} and ${root2}`;
+        } else if (discriminant === 0) {
+            const root = -b / (2 * a);
+            result.textContent = `One real root: ${root}`;
+        } else {
+            const real = -b / (2 * a);
+            const imag = Math.sqrt(-discriminant) / (2 * a);
+            result.textContent = `Two complex roots: ${real} + ${imag}i and ${real} - ${imag}i`;
+        }
+    }
+    </script>
+    <p>Find Y of slope</p>
+    <section>
+        <label>Enter m: <input id="m" type="number" step="any"></label><br>
+        <label>Enter x: <input id="x" type="number" step="any"></label><br>
+        <label>Enter b: <input id="bCoef" type="number" step="any"></label><br>
+        <button type="button" onclick="computeY()">Find y</button>
+        <div id="yResult"></div>
+    </section>
+
+    <script>
+    function computeY() {
+        const m = Number(document.getElementById('m').value);
+        const x = Number(document.getElementById('x').value);
+        const b = Number(document.getElementById('bCoef').value);
+        const y = m * x + b;
+        document.getElementById('yResult').textContent = `y = ${y}`;
+    }
+    </script>
+
+    <p>Triangle Area</p>
+    <section>
+        <label>Enter base: <input id="base" type="number" step="any"></label><br>
+        <label>Enter height: <input id="height" type="number" step="any"></label><br>
+        <button type="button" onclick="computeTriangleArea()">Calculate Area</button>
+        <div id="areaResult"></div>
+    </section>
+
+    <script>
+    function computeTriangleArea() {
+        const base = Number(document.getElementById('base').value);
+        const height = Number(document.getElementById('height').value);
         
-        <center>My name is User #00</center>
+        if (base <= 0 || height <= 0) {
+            document.getElementById('areaResult').textContent = 'Base and height must be positive numbers.';
+            return;
+        }
+        
+        const area = (base * height) / 2;
+        document.getElementById('areaResult').textContent = `Area = ${area}`;
+    }
+    </script>
+
+    <p>Volume of Cone</p>
+    <section>
+        <label>Enter radius: <input id="coneRadius" type="number" step="any"></label><br>
+        <label>Enter height: <input id="coneHeight" type="number" step="any"></label><br>
+        <button type="button" onclick="computeConeVolume()">Calculate Volume</button>
+        <div id="coneVolumeResult"></div>
+    </section>
+
+    <script>
+    function computeConeVolume() {
+        const radius = Number(document.getElementById('coneRadius').value);
+        const height = Number(document.getElementById('coneHeight').value);
+
+        if (radius <= 0 || height <= 0) {
+            document.getElementById('coneVolumeResult').textContent = 'Radius and height must be positive numbers.';
+            return;
+        }
+
+        const volume = (1 / 3) * Math.PI * radius * radius * height;
+        document.getElementById('coneVolumeResult').textContent = `Volume = ${volume.toFixed(4)}`;
+    }
+    </script>
+
+    <p>Volume of Sphere</p>
+    <section>
+        <label>Enter radius: <input id="sphereRadius" type="number" step="any"></label><br>
+        <button type="button" onclick="computeSphereVolume()">Calculate Volume</button>
+        <div id="sphereVolumeResult"></div>
+    </section>
+
+    <script>
+    function computeSphereVolume() {
+        const radius = Number(document.getElementById('sphereRadius').value);
+
+        if (radius <= 0) {
+            document.getElementById('sphereVolumeResult').textContent = 'Radius must be a positive number.';
+            return;
+        }
+
+        const volume = (4 / 3) * Math.PI * radius * radius * radius;
+        document.getElementById('sphereVolumeResult').textContent = `Volume = ${volume.toFixed(4)}`;
+    }
+    </script>
+    <p>Addition</p>
+    <section>
+        <label>Enter first number: <input id="num1" type="number" step="any"></label><br>
+        <label>Enter second number: <input id="num2" type="number" step="any"></label><br>
+        <button type="button" onclick="computeAddition()">Add</button>
+        <div id="addResult"></div>
+    </section>
+
+    <script>
+    function computeAddition() {
+        const num1 = Number(document.getElementById('num1').value);
+        const num2 = Number(document.getElementById('num2').value);
+        const sum = num1 + num2;
+        document.getElementById('addResult').textContent = `Sum = ${sum}`;
+    }
+    </script>
+
+
+
+<head>
+
+ 
+  <h2><center>Graphing Calculator</center></h2>
+<script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=6d1e34b9bbdd47c8a8d711ca512240f2"></script>
+
+  <div id="calculator" style="width: 600px; height: 400px;"></div>
+<script>
+  var elt = document.getElementById('calculator');
+  var calculator = Desmos.GraphingCalculator(elt);
+</script>
+</body>
+
+
+</main> 
+
     
     </body>
 
