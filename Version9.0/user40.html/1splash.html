@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(15, 76, 129, 0.92);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+        }
+        .navbar__brand {
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        .navbar__links {
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar__link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .navbar__link:hover {
+            background: rgba(255, 255, 255, 0.14);
+            transform: translateY(-1px);
+        }
+        .navbar__cta {
+            background: #fff;
+            color: #0f4c81;
+            font-weight: 700;
+        }
+        @media (max-width: 720px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0.9rem 1.2rem;
+            }
+            .navbar__links {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script type="text/template" id="navbar-template">
+    <nav class="navbar">
+        <a href="#" class="navbar__brand">Client Hub</a>
+        <div class="navbar__links">
+            <a href="2resource.html" class="navbar__link">Resource Hub</a>
+            <a href="#contact" class="navbar__link">Contact</a>
+            <a href="#" class="navbar__link navbar__cta">Get Started</a>
+        </div>
+    </nav>
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var template = document.getElementById("navbar-template");
+            if (!template) return;
+            var wrapper = document.createElement("div");
+            wrapper.innerHTML = template.textContent.trim();
+            var nav = wrapper.firstElementChild;
+            if (nav) {
+                document.body.insertBefore(nav, document.body.firstElementChild);
+            }
+        });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f4c81 0%, #1e7ea7 100%);
+            color: #fff;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 0.08em;
+        }
+        .hero p {
+            max-width: 640px;
+            margin: 1rem auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button {
+            padding: 0.95rem 1.8rem;
+            border: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: #0f4c81;
+            background: #fff;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .button.secondary {
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+        .features {
+            max-width: 1000px;
+            margin: 2rem auto 0;
+            display: grid;
+            gap: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 18px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .card h2 {
+            margin: 0 0 0.75rem;
+            font-size: 1.2rem;
+        }
+        .card p {
+            margin: 0;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Welcome to Your Client Hub</h1>
+        <p>Discover services tailored for your business, stay connected, and access the tools you need to move forward with confidence.</p>
+        <div class="buttons">
+            <a href="#services" class="button">Explore Services</a>
+            <a href="#contact" class="button secondary">Contact Us</a>
+        </div>
+        <div class="features" id="services">
+            <div class="card">
+                <h2>Personalized Support</h2>
+                <p>Get dedicated client support with fast responses and tailored solutions for your project.</p>
+            </div>
+            <div class="card">
+                <h2>Smart Planning</h2>
+                <p>Plan your next steps with clear guidance, timelines, and progress tracking.</p>
+            </div>
+            <div class="card">
+                <h2>Secure Access</h2>
+                <p>Enjoy a secure, private experience designed to protect your information and maintain trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Ready to get started? Reach out today and let's build something great.</p>
+    </footer>
+</body>
+</html>
