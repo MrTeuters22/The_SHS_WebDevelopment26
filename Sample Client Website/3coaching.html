@@ -27,66 +27,100 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <body>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+   <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
         <div class="container-fluid">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">PeaksPrehab</a>
+            <a class="navbar-brand fw-bold text-white ps-2" href="1splash.html">PeaksPrehab</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav me-auto">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <li class="nav-item">
-                        <a href="1splash.html" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="2resourcehub.html" class="nav-link">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="3coaching.html" class="nav-link">Coaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="business.html" class="nav-link">Business</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="chatrooms.html" class="nav-link">Chatrooms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="csurvivorship.html" class="nav-link">Survivorship</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mentalhealth.html" class="nav-link">Mental Health</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="nutrition.html" class="nav-link">Nutrition</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="fitness.html" class="nav-link">Fitness</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="spirituality.html" class="nav-link">Spirituality</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="events.html" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mailto:smailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link active" tabindex="-1">Contact</a>
-                    </li>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                    <li class="nav-item"><a class="nav-link active" href="1splash.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="2resourcehub.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3coaching.html">Coaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="extra-resources.html">External Links</a></li>
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-primary" type="button">Login</button>
-                </form>
+                <div class="d-flex pe-2">
+                    <a class="btn btn-primary btn-sm px-3" href="login.html">Login</a>
+                </div>
             </div>
         </div>
     </nav>
-        <!-- Your content goes here --> 
-    </body>
-    <footer>
-        <p>&copy; 2026 Your Company Name. All rights reserved.</p>
-    </footer>    
-</html>
+      <main class="container py-4">
+        
+        <div class="intro-section text-center mb-4">
+            <h1 class="display-5 fw-bold text-primary">Connect With a Specialist</h1>
+            <p class="lead text-muted">Book your direct 1-on-1 performance consultation or oncology rehab entry session.</p>
+        </div>
+
+        <div class="row g-5">
+            
+            <div class="col-lg-5">
+                <div class="card p-4 shadow-sm border-0 bg-light mb-4">
+                    <h3 class="h5 text-dark mb-3">📋 What to Expect</h3>
+                    <p class="small text-muted">Our 1-on-1 intake calls are designed to safely outline movement tolerances, review clinical preparation baselines, and match your goals with our tracking suites.</p>
+                </div>
+                
+                <div class="card p-4 shadow-sm border-0 bg-light">
+                    <h3 class="h5 text-dark mb-3">🔒 Secure Consultation</h3>
+                    <p class="small text-muted">All sessions adhere strictly to standard administrative privacy protections. Data points synced during evaluations remain strictly within your personal profile matrix.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card p-4 shadow-sm h-100 border-primary">
+                    <h3 class="h5 mb-4 text-primary font-weight-bold">📅 Select an Available Appointment Time</h3>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle small">
+                            <thead class="table-dark">
+                               <tr>
+                                   <th>Mon</th>
+                                   <th>Tue</th>
+                                   <th>Wed</th>
+                                   <th>Thu</th>
+                                   <th>Fri</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">9:00 AM</button></td>
+                                    <td><span class="text-muted d-block py-1">Booked</span></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">9:00 AM</button></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">10:30 AM</button></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">9:00 AM</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">1:00 PM</button></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">11:00 AM</button></td>
+                                    <td><span class="text-muted d-block py-1">Booked</span></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">1:30 PM</button></td>
+                                    <td><span class="text-muted d-block py-1">Booked</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="text-muted d-block py-1">Booked</span></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">3:30 PM</button></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">2:00 PM</button></td>
+                                    <td><span class="text-muted d-block py-1">Booked</span></td>
+                                    <td><button type="button" class="btn btn-outline-primary btn-sm w-100">4:00 PM</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label for="clientNotes" class="form-label font-weight-bold text-dark small">Optional Session Notes:</label>
+                        <textarea class="form-control" id="clientNotes" rows="2" placeholder="List any recovery targets, background information, or focus areas..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-4 fw-bold">Confirm Consultation Time Slot</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <p class="mb-0 small">&copy; 2026 Peaks Prehab. All rights reserved.</p>
+    </footer>
