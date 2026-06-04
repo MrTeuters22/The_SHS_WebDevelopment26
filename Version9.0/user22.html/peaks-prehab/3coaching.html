@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching - Peaks Prehab</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Book a call with Peaks Prehab">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="1splash.html" class="navbar-brand">Peaks Prehab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="1splash.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="2resourcehub.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="3coaching.html" class="nav-link active">Coaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="business.html" class="nav-link">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="chatrooms.html" class="nav-link">Chatrooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="csurvivorship.html" class="nav-link">Survivorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mentalhealth.html" class="nav-link">Mental Health</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nutrition.html" class="nav-link">Nutrition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fitness.html" class="nav-link">Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spirituality.html" class="nav-link">Spirituality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Schedule an Appointment</h2>
+        <p class="lead text-center text-muted">We provide personal coaching calls to review wellness goals, prehab programs, and support options.</p>
+
+        <div class="row mt-4">
+            <!-- Booking Form Column -->
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 shadow-sm">
+                    <h3 class="h4 card-title text-center mb-4">Book Your Session</h3>
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="clientName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="clientName" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clientEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="clientEmail" placeholder="john@example.com" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label for="bookingDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="bookingDate" required>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="bookingTime" class="form-label">Time</label>
+                                <select class="form-select" id="bookingTime" required>
+                                    <option value="">Select slot...</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="2:30 PM">2:30 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sessionType" class="form-label">Session Topic</label>
+                            <select class="form-select" id="sessionType" required>
+                                <option value="General Wellness Prehab">General Wellness Prehab</option>
+                                <option value="Nutrition Counseling">Nutrition Counseling</option>
+                                <option value="Survivorship Support">Survivorship Support</option>
+                                <option value="Mental Resilience Chat">Mental Resilience Chat</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Request Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking List Column -->
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 shadow-sm h-100">
+                    <h3 class="h4 card-title text-center mb-3">Scheduled Sessions</h3>
+                    <p class="text-muted text-center small">Your requested sessions will display here dynamically in real time.</p>
+                    <ul id="bookingList" class="list-group mt-2">
+                        <!-- Bookings will be appended here by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Webpage made by <a href="1splash.html">Bauke Nijs</a> | &copy; 2026 Peaks Prehab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Dynamic JS script -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop form submission reloading the page
+            
+            // Extract values
+            var name = document.getElementById('clientName').value;
+            var date = document.getElementById('bookingDate').value;
+            var time = document.getElementById('bookingTime').value;
+            var type = document.getElementById('sessionType').value;
+            
+            // Simple validation confirmation
+            if (!name || !date || !time || !type) {
+                alert('Please fill out all fields.');
+                return;
+            }
+            
+            // Find target element
+            var bookingList = document.getElementById('bookingList');
+            
+            // Create list element
+            var item = document.createElement('li');
+            item.className = 'list-group-item d-flex justify-content-between align-items-start flex-column mb-2 border rounded p-3 animate__animated animate__fadeIn';
+            
+            // Create content
+            item.innerHTML = '<div><strong>' + type + '</strong></div>' +
+                             '<div><i class="fa-regular fa-calendar-check me-2 text-success"></i>Date: ' + date + ' at ' + time + '</div>' +
+                             '<div class="text-muted small">Client: ' + name + '</div>';
+            
+            // Create a small cancel button
+            var cancelBtn = document.createElement('button');
+            cancelBtn.className = 'btn btn-danger btn-sm mt-2 py-1 px-2';
+            cancelBtn.style.padding = '2px 8px';
+            cancelBtn.style.fontSize = '10px';
+            cancelBtn.innerText = 'Cancel Request';
+            
+            // Remove function
+            cancelBtn.onclick = function() {
+                bookingList.removeChild(item);
+            };
+            
+            item.appendChild(cancelBtn);
+            
+            // Append to list
+            bookingList.appendChild(item);
+            
+            // Reset fields
+            document.getElementById('bookingForm').reset();
+            
+            // Simple confirmation popup
+            alert('Hello ' + name + ', your appointment request has been added to the display below!');
+        });
+    </script>
+</body>
+</html>

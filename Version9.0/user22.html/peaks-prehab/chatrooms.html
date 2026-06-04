@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatrooms - Peaks Prehab</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Support chatrooms at Peaks Prehab">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="1splash.html" class="navbar-brand">Peaks Prehab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="1splash.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="2resourcehub.html" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="3coaching.html" class="nav-link">Coaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="business.html" class="nav-link">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="chatrooms.html" class="nav-link active">Chatrooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="csurvivorship.html" class="nav-link">Survivorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mentalhealth.html" class="nav-link">Mental Health</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nutrition.html" class="nav-link">Nutrition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fitness.html" class="nav-link">Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spirituality.html" class="nav-link">Spirituality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:peaksprehab@gmail.com?Subject=Hello" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2>Support Group Chatroom</h2>
+                <p class="lead text-muted">Connect with others preparing for or recovering from health and fitness milestones.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 mb-4">
+                <!-- Chat Window Card -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="h5 mb-0 text-center text-white"><i class="fa-regular fa-comments me-2 text-white"></i>Peer Support Circle</h4>
+                    </div>
+                    <!-- Chat Messages Area -->
+                    <div class="card-body" id="chatArea" style="height: 300px; overflow-y: auto; background-color: #f8f9fa;">
+                        <div class="mb-3 text-start">
+                            <span class="badge bg-secondary p-2 mb-1">Sarah (Coach)</span>
+                            <div class="bg-white border rounded p-2 d-inline-block shadow-xs max-w-75">
+                                Welcome to our support chat! Feel free to share your thoughts, challenges, or positive milestones here.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Input Area -->
+                    <div class="card-footer bg-white border-top-0">
+                        <form id="chatForm">
+                            <div class="input-group">
+                                <input type="text" id="chatUser" class="form-control" placeholder="Name" style="max-width: 120px;" required>
+                                <input type="text" id="chatMessage" class="form-control" placeholder="Type a message..." required>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Webpage made by <a href="1splash.html">Bauke Nijs</a> | &copy; 2026 Peaks Prehab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Sim JS -->
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var user = document.getElementById('chatUser').value;
+            var message = document.getElementById('chatMessage').value;
+            
+            if(!user || !message) return;
+            
+            var chatArea = document.getElementById('chatArea');
+            
+            // Append User Message
+            var userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'mb-3 text-end';
+            userMsgDiv.innerHTML = '<span class="badge bg-primary p-2 mb-1">' + user + '</span>' +
+                                   '<div class="bg-primary text-white border rounded p-2 d-inline-block shadow-xs text-start" style="max-width: 75%;">' + message + '</div>';
+            chatArea.appendChild(userMsgDiv);
+            
+            // Clear message box
+            document.getElementById('chatMessage').value = '';
+            
+            // Scroll to bottom
+            chatArea.scrollTop = chatArea.scrollHeight;
+            
+            // Trigger auto supportive reply
+            setTimeout(function() {
+                var supportReplies = [
+                    "You've got this! Every step in prehab builds a stronger base.",
+                    "Thank you for sharing. We support each other on this wellness path.",
+                    "That takes strength! Remember to balance your physical prep with mental recovery.",
+                    "Great to hear! Keeping a positive mindset is half the battle."
+                ];
+                var randomReply = supportReplies[Math.floor(Math.random() * supportReplies.length)];
+                
+                var botMsgDiv = document.createElement('div');
+                botMsgDiv.className = 'mb-3 text-start animate__animated animate__fadeIn';
+                botMsgDiv.innerHTML = '<span class="badge bg-success p-2 mb-1">Sarah (Coach)</span>' +
+                                      '<div class="bg-white border rounded p-2 d-inline-block shadow-xs" style="max-width: 75%;">' + randomReply + '</div>';
+                chatArea.appendChild(botMsgDiv);
+                
+                // Scroll to bottom
+                chatArea.scrollTop = chatArea.scrollHeight;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
