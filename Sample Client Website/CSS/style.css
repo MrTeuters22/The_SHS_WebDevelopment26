@@ -1,81 +1,82 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #46cb4f;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	border-spacing: 2px;
+/* General */
+body{
+    background-color:#f4f9f6;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-tr {
-	border: 3px solid #ffffff;
-	text-align: center;
-	background-color:#07280e; 
+/* Navbar */
+.navbar{
+    background-color:#4a7c59 !important;
 }
 
-th {
-	border: 3px solid #ffffff;
-	text-align: center;
-	color: #ffffff;
-	background-color: #1a9367;
-}
-body {
-	background-color: #0d8056;
-}
-/* Container styling */
-.navbar {
-  background-color: #2e47e9;
-  padding: 1px;
+.navbar-brand{
+    font-weight:bold;
+    font-size:1.5rem;
 }
 
 .nav-link{
-    font-size: 30%;
-    background-color: #4384e5;
-    border-radius: 4px; 
-    text-wrap: nowrap; 
-}
-/* Remove default list styling and use Flexbox */
-.nav-item {
-    font-size: 12;
-    margin: 1px;
-    padding: 1px;
-    /*display: flex;*/
-    justify-content: center; /* Centers the links */
+    color:white !important;
 }
 
-/* Style the individual links */
-.nav-item a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
+.nav-link:hover{
+    color:#d8f3dc !important;
 }
 
-/* Change color on hover */
-.nav-item a:hover {
-  background-color: #575757;
-  border-radius: 4px;
+/* Hero Section */
+.hero{
+    background: linear-gradient(135deg, #74c69d, #52b788);
+    color:white;
+    padding:100px 20px;
+    text-align:center;
 }
-.btn {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 14px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 1px 1px;
-    cursor: pointer;
+
+.hero h1{
+    font-size:3rem;
+    font-weight:bold;
 }
-h1 {
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #46cb4f;
-    text-align: center;
+
+.hero p{
+    font-size:1.25rem;
 }
-p{
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #0f25e9;
-    text-align: center;
+
+/* Buttons */
+.btn-success{
+    background-color:#2d6a4f;
+    border:none;
+}
+
+.btn-success:hover{
+    background-color:#1b4332;
+}
+
+.btn-light{
+    color:#2d6a4f;
+    font-weight:bold;
+}
+
+/* Cards */
+.card{
+    border:none;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 10px 20px rgba(0,0,0,.15);
+}
+
+.card-body{
+    background-color:white;
+    border-radius:15px;
+}
+
+.card h4{
+    color:#2d6a4f;
+}
+
+/* Footer */
+footer{
+    background-color:#2d6a4f;
+    color:white;
 }
