@@ -3,13 +3,144 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TITLE HERE</title>
+        <title>Plan events</title>
 
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar</title>
+
+<style>
+
+    .calendar {
+        width: 700px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .month {
+        background: #4a90e2;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .days div {
+        height: 80px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: right;
+    }
+
+    .today {
+        background: #ffeb3b;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .weekdays,
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .weekdays div {
+        background: #e9eef5;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #ddd;
+    }
+
+    .day {
+        min-height: 90px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        cursor: pointer;
+        position: relative;
+        background: white;
+    }
+
+    .day:hover {
+        background: #f8fbff;
+    }
+
+    .day-number {
+        font-weight: bold;
+    }
+
+    .event-dot {
+        width: 8px;
+        height: 8px;
+        background: red;
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+
+    .selected {
+        background: #d7ebff;
+    }
+
+    .sidebar {
+        width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background: #4a90e2;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #3578c8;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-left: 10px;
+    width: auto;
+    }
+
+    .delete-btn:hover {
+        background: #c0392b;
+    }
+
+</style>
+
 
         <!-- CSS -->
         <!-- Bootstrap -->
@@ -84,9 +215,182 @@
             </div>
         </div>
     </nav>
-        <!-- Your content goes here --> 
+    <div class="container">
+
+    <div class="calendar">
+        <div class="month">June 2026</div>
+
+        <div class="weekdays">
+            <div>Sun</div><div>Mon</div><div>Tue</div>
+            <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+
+        <div class="days" id="calendarDays"></div>
+    </div>
+
+    <div class="sidebar">
+        <h2 id="selectedDate">Select a Date</h2>
+
+        <input
+            type="text"
+            id="eventInput"
+            placeholder="Enter event..."
+        >
+
+        <button onclick="addEvent()">Add Event</button>
+
+        <h3>Events</h3>
+        <ul id="eventList"></ul>
+    </div>
+
+</div>
+        <script>
+        const daysContainer = document.getElementById("calendarDays");
+        const selectedDateText = document.getElementById("selectedDate");
+        const eventList = document.getElementById("eventList");
+        const eventInput = document.getElementById("eventInput");
+
+        let selectedDate = null;
+
+        const events =
+            JSON.parse(localStorage.getItem("calendarEvents")) || {};
+
+        function saveEvents() {
+            localStorage.setItem(
+                "calendarEvents",
+                JSON.stringify(events)
+            );
+        }
+
+        function createCalendar() {
+            daysContainer.innerHTML = "";
+
+            
+            for (let i = 0; i < 1; i++) {
+                daysContainer.appendChild(document.createElement("div"));
+            }
+
+            for (let day = 1; day <= 30; day++) {
+
+                const cell = document.createElement("div");
+                cell.className = "day";
+
+                cell.innerHTML =
+                    `<div class="day-number">${day}</div>`;
+
+                if (events[day] && events[day].length > 0) {
+                    const dot = document.createElement("div");
+                    dot.className = "event-dot";
+                    cell.appendChild(dot);
+                }
+
+                cell.addEventListener("click", () => {
+                    document
+                        .querySelectorAll(".day")
+                        .forEach(d => d.classList.remove("selected"));
+
+                    cell.classList.add("selected");
+
+                    selectedDate = day;
+                    selectedDateText.textContent =
+                        `June ${day}, 2026`;
+
+                    loadEvents(day);
+                });
+
+                daysContainer.appendChild(cell);
+            }
+        }
+
+        function loadEvents(day) {
+            eventList.innerHTML = "";
+
+            const dayEvents = events[day] || [];
+
+            dayEvents.forEach((event, index) => {
+                const li = document.createElement("li");
+                li.textContent = event;
+                eventList.appendChild(li);
+            });
+        }
+
+        function addEvent() {
+
+            if (!selectedDate) {
+                alert("Select a date first.");
+                return;
+            }
+
+            const text = eventInput.value.trim();
+
+            if (!text) return;
+
+            if (!events[selectedDate]) {
+                events[selectedDate] = [];
+            }
+
+            events[selectedDate].push(text);
+
+            saveEvents();
+
+            eventInput.value = "";
+
+            loadEvents(selectedDate);
+            createCalendar();
+        }
+
+        createCalendar();
+
+        function loadEvents(day) {
+            eventList.innerHTML = "";
+
+            const dayEvents = events[day] || [];
+
+            dayEvents.forEach((event, index) => {
+
+                const li = document.createElement("li");
+
+                const eventText = document.createElement("span");
+                eventText.textContent = event;
+
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.style.marginLeft = "10px";
+                deleteBtn.style.width = "auto";
+                deleteBtn.style.padding = "4px 8px";
+                deleteBtn.style.background = "#e74c3c";
+
+                deleteBtn.onclick = () => {
+                    events[day].splice(index, 1);
+
+                    if (events[day].length === 0) {
+                        delete events[day];
+                    }
+
+                    saveEvents();
+                    loadEvents(day);
+                    createCalendar();
+                };
+
+                li.appendChild(eventText);
+                li.appendChild(deleteBtn);
+
+                eventList.appendChild(li);
+            });
+        }
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+        </script>
+
     </body>
     <footer>
         <p>&copy; 2026 Your Company Name. All rights reserved.</p>
     </footer>    
 </html>
+
+
+
+
+
