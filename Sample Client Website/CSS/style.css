@@ -1,81 +1,83 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #46cb4f;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	border-spacing: 2px;
+/* Theme variables */
+:root{
+    --brand-blue: #0033cc; /* stronger primary blue */
+    --brand-pink: #ff2d95; /* hot pink accent */
+    --nav-bg: #ffffff; /* navbar background */
+    --nav-text: #063059; /* dark blue text */
+    --muted: #6b7280;
 }
 
-tr {
-	border: 3px solid #ffffff;
-	text-align: center;
-	background-color:#07280e; 
+/* Global page background and typography */
+body{
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #0b2136;
+    margin:0;
 }
 
-th {
-	border: 3px solid #ffffff;
-	text-align: center;
-	color: #ffffff;
-	background-color: #1a9367;
+/* Tables: keep clean neutral styles */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:1rem 0;
 }
-body {
-	background-color: #0d8056;
-}
-/* Container styling */
-.navbar {
-  background-color: #2e47e9;
-  padding: 1px;
+th, td{
+    padding:0.6rem 0.75rem;
+    border-bottom:1px solid #e6eef8;
 }
 
-.nav-link{
-    font-size: 30%;
-    background-color: #4384e5;
-    border-radius: 4px; 
-    text-wrap: nowrap; 
+/* Navbar: larger, cleaner, professional */
+.navbar{
+    background: var(--nav-bg) !important;
+    padding:0.6rem 1rem;
+    border-bottom:1px solid rgba(0,51,204,0.06);
 }
-/* Remove default list styling and use Flexbox */
-.nav-item {
-    font-size: 12;
-    margin: 1px;
-    padding: 1px;
-    /*display: flex;*/
-    justify-content: center; /* Centers the links */
+.navbar-brand{
+    color:var(--brand-pink) !important;
+    font-weight:700;
+    font-size:1.25rem;
+    letter-spacing:0.2px;
 }
 
-/* Style the individual links */
-.nav-item a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
+/* Nav links */
+.navbar .navbar-nav .nav-link{
+    color:var(--nav-text) !important;
+    font-size:1rem;
+    padding:0.6rem 1rem;
+    margin:0 0.15rem;
+    border-radius:8px;
+    transition:all 150ms ease-in-out;
+}
+.navbar .navbar-nav .nav-link:hover{
+    background:rgba(0,51,204,0.06);
+    color:var(--brand-blue) !important;
+}
+.navbar .navbar-nav .nav-link.active{
+    background: var(--brand-pink);
+    color:#fff !important;
 }
 
-/* Change color on hover */
-.nav-item a:hover {
-  background-color: #575757;
-  border-radius: 4px;
+/* Toggler and buttons */
+.navbar .navbar-toggler{
+    border-radius:8px;
 }
-.btn {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 14px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 1px 1px;
-    cursor: pointer;
+.btn-primary{
+    background:var(--brand-blue) !important;
+    border:none !important;
+    color:#fff !important;
 }
-h1 {
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #46cb4f;
-    text-align: center;
+.btn{
+    border-radius:8px;
 }
-p{
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #0f25e9;
-    text-align: center;
+
+/* Headings and paragraphs: modern neutral look */
+h1,h2,h3{color:#052033;margin:0 0 0.5rem 0;font-weight:600}
+p{color:var(--muted);margin:0 0 1rem 0}
+
+/* Small screens: ensure spacing in collapsed menu */
+@media (max-width:767px){
+    .navbar .navbar-nav .nav-link{padding:0.5rem 0.75rem;font-size:0.95rem}
 }
+
+/* Misc: keep other UI elements tidy */
+.btn-primary:hover{filter:brightness(0.98)}
