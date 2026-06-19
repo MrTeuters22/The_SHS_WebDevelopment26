@@ -1,81 +1,111 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #46cb4f;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	border-spacing: 2px;
-}
-
-tr {
-	border: 3px solid #ffffff;
-	text-align: center;
-	background-color:#07280e; 
-}
-
-th {
-	border: 3px solid #ffffff;
-	text-align: center;
-	color: #ffffff;
-	background-color: #1a9367;
-}
 body {
-	background-color: #0d8056;
+    background: linear-gradient(135deg, #ff8ad8, #a855f7, #38bdf8);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
-/* Container styling */
+
+/* Navbar */
 .navbar {
-  background-color: #2e47e9;
-  padding: 1px;
+    background-color: #111827 !important;
+    padding: 10px;
 }
 
-.nav-link{
-    font-size: 30%;
-    background-color: #4384e5;
-    border-radius: 4px; 
-    text-wrap: nowrap; 
-}
-/* Remove default list styling and use Flexbox */
-.nav-item {
-    font-size: 12;
-    margin: 1px;
-    padding: 1px;
-    /*display: flex;*/
-    justify-content: center; /* Centers the links */
+.nav-link {
+    font-size: 14px;
+    border-radius: 6px;
+    margin: 2px;
 }
 
-/* Style the individual links */
+.nav-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
 .nav-item a {
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
-    display: block;
 }
 
-/* Change color on hover */
-.nav-item a:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
 .btn {
-    background-color: #4CAF50; /* Green */
+    background-color: #ec4899;
     border: none;
     color: white;
-    padding: 14px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 1px 1px;
-    cursor: pointer;
 }
+
+.btn:hover {
+    background-color: #db2777;
+}
+
+/* Resource Hub */
 h1 {
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #46cb4f;
-    text-align: center;
+    color: white;
+    font-weight: bold;
 }
-p{
-    font-family: "Marker Felt", "Comic Sans MS", fantasy;
-    color: #0f25e9;
+
+p {
+    color: white;
+}
+
+#searchInput {
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-body {
+    background: white;
+    border-radius: 20px;
+}
+
+.card h3 {
+    color: #7c3aed;
+    font-weight: bold;
+}
+
+.card p {
+    color: #333;
+}
+
+.fa-brain,
+.fa-apple-whole,
+.fa-dumbbell,
+.fa-heart-pulse {
+    color: #ec4899;
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
     text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* Keep tables looking decent if other pages use them */
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background-color: #7c3aed;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
 }
