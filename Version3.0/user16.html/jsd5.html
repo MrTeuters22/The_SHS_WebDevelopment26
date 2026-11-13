@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function isNegative(){
+                //Your code for exercise one here
+            if(document.getElementById("num").value < 0){
+                document.getElementById("outError").innerHTML = "Negative";
+            }
+            
+
+            function isNegOrNon(){
+                //Your code for exercise two here
+           if(document.getElementById("num").value < 0){
+                document.getElementById("outError").innerHTML = "Negative";
+            }
+            else{
+                document.getElementById("outError").innerHTML = "nonnegative";
+            }
+
+            }
+
+            function isNegOrNonOrNan(){
+                //Your code for exercise three
+          
+           if(document.getElementById("num").value ==word){
+                document.getElementById("outError").innerHTML = "Not a number";
+            }
+            else{
+                document.getElementById("outError").innerHTML = "Number";
+            }
+
+        }
+
+        </script>
+
+    </head>
+
+    <body>
+        <main>
+            Number:
+            <input id="num" type="text"/>
+            <input id="exerciseOne" onclick="isNegative()" type="button" value="Exercise One" />
+            <input id="exerciseTwo" onclick="isNegOrNon()" type="button" value="Exercise Two" />
+            <input id="exerciseThree" onclick="isNegOrNonOrNaN()" type="button" value="Exercise Three" />
+            <div id="outError"></div>
+
+        </main>
+    </body>
+</html>
